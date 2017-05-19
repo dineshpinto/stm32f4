@@ -1,0 +1,64 @@
+
+
+Pins on connector (pins pointing away)
+--------------------------------------
+
+10  8   6   4   2   20  18  16  14   12
+  9   7   5   3   1   19   17   15   13   11	 			    
+  
+  
+Assuming the second row can be dispaced left by delta
+
+Equivalent board pins
+---------------------
+MDR     muC
+1       0
+2       2
+3       11
+4       12
+5       22
+6       21
+7       2
+8       24
+9               28                       
+10              25
+11              26
+12              25
+13              
+14
+15
+16
+17
+18
+19
+20
+
+
+
+
+Pin diagram
+-----------
+
+Board	Connector 
+pins	pins
+
+PE7		NC
+PE8		GND
+PE9		Load
+PE10	Data_Select	
+PE11	D0
+PE12	D1
+PE13	GND
+PE14	D2
+PE15	D3
+PB10	D4
+PB11	D5	
+PB12	D6
+PB13	D7
+PB14	GND
+PB15	D8
+PD8		D9
+PD9		D10
+PD10	D11
+PD11	GND
+PD12	D12
