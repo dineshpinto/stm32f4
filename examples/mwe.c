@@ -31,7 +31,9 @@ void strrev(unsigned int* data, unsigned int end)
 
 
 void tobinstr(unsigned long long int value, unsigned int bitsCount, unsigned int* output)
-{
+{	// for(int i=0;i<19;i++) 
+	// 	printf("%d", data[i]);
+
 	for (int i=(bitsCount-1); i>=0; --i, value>>=1)
 		output[i] = (value & 1) + 0;
 }
@@ -39,11 +41,13 @@ void tobinstr(unsigned long long int value, unsigned int bitsCount, unsigned int
 
 int main(void)
 {
+
+	for (int i=0;i<100000;i++){
 	unsigned long long int decimal = 0;
 	unsigned int data[19] = {0};
 	
 	// 10^{18}
-	decimal = 4;
+	decimal = 999999999999999999;
 	
 	tobinstr(decimal, 19, data);
 
@@ -54,14 +58,6 @@ int main(void)
 
 	strrev(data, sizeof(data)/sizeof(data[0]) - 1);
 
-	if (data[4])
-		printf("Yep");
-	else
-		printf("Nein");
-
-
-	printf("\n");
-
 	for(int i=0;i<19;i++) 
 		printf("%d", data[i]);
 
@@ -70,4 +66,5 @@ int main(void)
 	writetoawg(data);
 
 	printf("\n");
+}
 }
