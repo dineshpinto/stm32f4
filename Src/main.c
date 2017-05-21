@@ -40,8 +40,6 @@
 #include "stm32f4xx_hal.h"
 
 /* USER CODE BEGIN Includes */
-#include <stdio.h>
-#include <string.h>
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -57,19 +55,35 @@ static void MX_GPIO_Init(void);
 
 /* USER CODE BEGIN PFP */
 /* Private function prototypes -----------------------------------------------*/
-void tobinstr(int, int, char*);
-void writetoawg(char *);
+void tobinstr(unsigned long long int, unsigned int, unsigned int*);
+void strrev(unsigned int*, unsigned int);
+void writetoawg(unsigned int*);
 /* USER CODE END PFP */
 
 /* USER CODE BEGIN 0 */
-void tobinstr(int value, int bitsCount, char* output)
+void tobinstr(unsigned long long int value, unsigned int bitsCount, 
+	unsigned int* output)
 {
-	output[bitsCount] = '\0';
 	for (int i=(bitsCount-1); i>=0; --i, value>>=1)
-		output[i] = (value & 1) + '0';
+		output[i] = (value & 1) + 0;
 }
 
-void writetoawg(char *data)
+void strrev(unsigned int* data, unsigned int end)
+{
+    unsigned int temp;
+    unsigned int start = 0;
+
+    while (start < end)
+    {
+        temp = data[start];   
+        data[start] = data[end];
+        data[end] = temp;
+        start++;
+        end--;
+    }   
+}     
+
+void writetoawg(unsigned int* data)
 {
 	/* Set Data_Select to 1 */
 	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_15, GPIO_PIN_SET);
@@ -182,7 +196,6 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-		_Bool writeonce = 0;
 
   /* USER CODE END 1 */
 
@@ -214,12 +227,15 @@ int main(void)
   while (1)
   {
 		uint16_t button = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0);
-		long double decimal;
-		char data[19];
+		uint16_t tt_input = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_1);
+
+		_Bool writeonce = 0;
+		unsigned long long int decimal = 0;
+	  	unsigned int data[19] = {0};
 		
-		if (button == 1 && writeonce == 0)
+		if (tt_input == 1 && writeonce == 0)
 		{
-			/* Switch to Red LED */
+			/* Switch on Red LED */
 			HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12, GPIO_PIN_SET);
 			
 			decimal = 1618;
@@ -231,11 +247,12 @@ int main(void)
 			writetoawg(data);
 			writeonce = 1;
 			
+			/* Switch off Red LED */
 			HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12, GPIO_PIN_RESET);
 		}
-		else if (button == 0 && writeonce == 0)
+		else if (tt_input == 0 && writeonce == 0)
 		{
-			/* Switch to Green LED */
+			/* Switch on Green LED */
 			HAL_GPIO_WritePin(GPIOD, GPIO_PIN_14, GPIO_PIN_SET);
 			
 			decimal = 420;
@@ -246,13 +263,11 @@ int main(void)
 			/* Send 19-bit data string to AWG, toggles Data_Select with delay 100ms*/
 			writetoawg(data);
 			writeonce = 1;
-			
+
+			/* Switch off Green LED */
 			HAL_GPIO_WritePin(GPIOD, GPIO_PIN_14, GPIO_PIN_RESET);
 		}
-		else
-		{
-			HAL_Delay(100);
-		}
+
 		/* USER CODE END WHILE */
 
 		/* USER CODE BEGIN 3 */
