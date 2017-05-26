@@ -36,13 +36,13 @@
 <layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
 <layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
-<layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
-<layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
+<layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
+<layer number="44" name="Drills" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
-<layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="no" active="no"/>
@@ -56,73 +56,13 @@
 </layers>
 <board>
 <plain>
+<text x="-27.94" y="-12.7" size="1.778" layer="1">D. Pinto
+Phy. Inst. 3
+Uni Stuttgart</text>
+<dimension x1="-33.02" y1="77.47" x2="-33.02" y2="-13.97" x3="-33.02" y3="31.75" textsize="1.778" layer="1"/>
+<dimension x1="-29.21" y1="80.01" x2="31.75" y2="80.01" x3="1.27" y3="80.01" textsize="1.778" layer="1"/>
 </plain>
 <libraries>
-<library name="con-coax" urn="urn:adsk.eagle:library:133">
-<description>&lt;b&gt;Coax Connectors&lt;/b&gt;&lt;p&gt;
-Radiall  and M/A COM.&lt;p&gt;
-&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
-<packages>
-<package name="LTI-SASF54GT" library_version="1">
-<description>&lt;b&gt;SMA vertical PCB thrue hole jack&lt;/b&gt;&lt;p&gt;
-Source: Lighthorse Technologies, inc. SASF54GT.pdf</description>
-<wire x1="-1.1" y1="3.075" x2="1.1" y2="3.075" width="0.2032" layer="21"/>
-<wire x1="3.075" y1="1.1" x2="3.075" y2="-1.1" width="0.2032" layer="21"/>
-<wire x1="1.1" y1="-3.075" x2="-1.1" y2="-3.075" width="0.2032" layer="21"/>
-<wire x1="-3.075" y1="-1.1" x2="-3.075" y2="1.1" width="0.2032" layer="21"/>
-<wire x1="-3.0749" y1="3.0749" x2="3.075" y2="3.075" width="0.2032" layer="51"/>
-<wire x1="3.075" y1="3.075" x2="3.0749" y2="-3.0749" width="0.2032" layer="51"/>
-<wire x1="3.0749" y1="-3.0749" x2="-3.075" y2="-3.075" width="0.2032" layer="51"/>
-<wire x1="-3.075" y1="-3.075" x2="-3.0749" y2="3.0749" width="0.2032" layer="51"/>
-<circle x="0" y="0" radius="3.0501" width="0.2032" layer="51"/>
-<circle x="0" y="0" radius="1.7" width="0.2032" layer="21"/>
-<pad name="1" x="0" y="0" drill="1.5" diameter="2.2"/>
-<pad name="2" x="-2.54" y="2.54" drill="1.5" diameter="2.2"/>
-<pad name="3" x="2.54" y="2.54" drill="1.5" diameter="2.2"/>
-<pad name="4" x="2.54" y="-2.54" drill="1.5" diameter="2.2"/>
-<pad name="5" x="-2.54" y="-2.54" drill="1.5" diameter="2.2"/>
-<text x="-2.54" y="4.445" size="1.27" layer="25">&gt;NAME</text>
-<text x="-3.175" y="-5.715" size="1.27" layer="27">&gt;VALUE</text>
-</package>
-<package name="A1944" library_version="1">
-<description>&lt;b&gt;BNC CONNECTOR&lt;/b&gt;&lt;p&gt;
-50 Ohm&lt;p&gt;
-distributor Buerklin 78F2475</description>
-<wire x1="-3.98" y1="-6" x2="3.98" y2="-6" width="0.254" layer="21"/>
-<wire x1="6" y1="-3.98" x2="6" y2="3.98" width="0.254" layer="21"/>
-<wire x1="3.98" y1="6" x2="-3.98" y2="6" width="0.254" layer="21"/>
-<wire x1="-6" y1="3.98" x2="-6" y2="-3.98" width="0.254" layer="21"/>
-<wire x1="-5.25" y1="6" x2="-6" y2="5.25" width="0.254" layer="51"/>
-<wire x1="5.25" y1="6" x2="6" y2="5.25" width="0.254" layer="51"/>
-<wire x1="6" y1="-5.25" x2="5.25" y2="-6" width="0.254" layer="51"/>
-<wire x1="-5.25" y1="-6" x2="-6" y2="-5.25" width="0.254" layer="51"/>
-<wire x1="-1.5" y1="0.5" x2="1.5" y2="0.5" width="0.3048" layer="21" curve="-143.130102"/>
-<wire x1="-1.5" y1="-0.5" x2="1.5" y2="-0.5" width="0.3048" layer="21" curve="143.130102"/>
-<wire x1="-4.572" y1="1.016" x2="-5.461" y2="1.016" width="0.254" layer="21"/>
-<wire x1="-5.461" y1="1.016" x2="-5.461" y2="-1.016" width="0.254" layer="21"/>
-<wire x1="-5.461" y1="-1.016" x2="-4.572" y2="-1.016" width="0.254" layer="21"/>
-<wire x1="4.572" y1="-1.016" x2="5.461" y2="-1.016" width="0.254" layer="21"/>
-<wire x1="5.461" y1="-1.016" x2="5.461" y2="1.016" width="0.254" layer="21"/>
-<wire x1="5.461" y1="1.016" x2="4.572" y2="1.016" width="0.254" layer="21"/>
-<wire x1="-6" y1="5.25" x2="-6" y2="3.81" width="0.254" layer="51"/>
-<wire x1="-6" y1="-3.81" x2="-6" y2="-5.25" width="0.254" layer="51"/>
-<wire x1="-5.25" y1="-6" x2="-3.81" y2="-6" width="0.254" layer="51"/>
-<wire x1="6" y1="-5.25" x2="6" y2="-3.81" width="0.254" layer="51"/>
-<wire x1="3.81" y1="-6" x2="5.25" y2="-6" width="0.254" layer="51"/>
-<wire x1="-3.81" y1="6" x2="-5.25" y2="6" width="0.254" layer="51"/>
-<wire x1="6" y1="3.81" x2="6" y2="5.25" width="0.254" layer="51"/>
-<wire x1="5.25" y1="6" x2="3.81" y2="6" width="0.254" layer="51"/>
-<circle x="0" y="0" radius="4.5961" width="0.254" layer="21"/>
-<pad name="1" x="0" y="0" drill="1.016" diameter="1.778"/>
-<pad name="2" x="5.08" y="5.08" drill="1.016" diameter="1.778"/>
-<pad name="3" x="-5.08" y="5.08" drill="1.016" diameter="1.778"/>
-<pad name="4" x="-5.08" y="-5.08" drill="1.016" diameter="1.778"/>
-<pad name="5" x="5.08" y="-5.08" drill="1.016" diameter="1.778"/>
-<text x="-2.54" y="6.35" size="1.27" layer="25">&gt;NAME</text>
-<text x="-2.54" y="-7.62" size="1.27" layer="27">&gt;VALUE</text>
-</package>
-</packages>
-</library>
 </libraries>
 <attributes>
 </attributes>
@@ -132,7 +72,7 @@ distributor Buerklin 78F2475</description>
 <class number="0" name="default" width="0" drill="0">
 </class>
 </classes>
-<designrules name="default">
+<designrules name="default *">
 <description language="de">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
 &lt;p&gt;
 Die Standard-Design-Rules sind so gewählt, dass sie für 
@@ -175,11 +115,11 @@ design rules under a new name.</description>
 <param name="rvViaInner" value="0.25"/>
 <param name="rvMicroViaOuter" value="0.25"/>
 <param name="rvMicroViaInner" value="0.25"/>
-<param name="rlMinPadTop" value="10mil"/>
+<param name="rlMinPadTop" value="12mil"/>
 <param name="rlMaxPadTop" value="20mil"/>
 <param name="rlMinPadInner" value="10mil"/>
 <param name="rlMaxPadInner" value="20mil"/>
-<param name="rlMinPadBottom" value="10mil"/>
+<param name="rlMinPadBottom" value="12mil"/>
 <param name="rlMaxPadBottom" value="20mil"/>
 <param name="rlMinViaOuter" value="8mil"/>
 <param name="rlMaxViaOuter" value="20mil"/>
@@ -312,16 +252,8 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="E$1" library="con-coax" library_urn="urn:adsk.eagle:library:133" package="LTI-SASF54GT" value="" x="24.13" y="5.08"/>
-<element name="E$2" library="con-coax" library_urn="urn:adsk.eagle:library:133" package="A1944" value="" x="24.13" y="5.08"/>
 </elements>
 <signals>
-<signal name="S$21">
-<via x="-25.4" y="12.7" extent="1-16" drill="0.35"/>
-</signal>
-<signal name="S$22">
-<via x="-22.86" y="12.7" extent="1-16" drill="0.35"/>
-</signal>
 <signal name="S$23">
 <via x="-25.4" y="15.24" extent="1-16" drill="0.35"/>
 </signal>
@@ -376,14 +308,8 @@ design rules under a new name.</description>
 <signal name="S$38">
 <via x="-25.4" y="33.02" extent="1-16" drill="0.35"/>
 </signal>
-<signal name="S$39">
-<via x="-25.4" y="35.56" extent="1-16" drill="0.35"/>
-</signal>
 <signal name="S$40">
 <via x="-22.86" y="35.56" extent="1-16" drill="0.35"/>
-</signal>
-<signal name="S$41">
-<via x="-25.4" y="38.1" extent="1-16" drill="0.35"/>
 </signal>
 <signal name="S$42">
 <via x="-22.86" y="38.1" extent="1-16" drill="0.35"/>
@@ -399,9 +325,6 @@ design rules under a new name.</description>
 </signal>
 <signal name="S$46">
 <via x="-22.86" y="43.18" extent="1-16" drill="0.35"/>
-</signal>
-<signal name="S$47">
-<via x="-25.4" y="45.72" extent="1-16" drill="0.35"/>
 </signal>
 <signal name="S$48">
 <via x="-22.86" y="45.72" extent="1-16" drill="0.35"/>
@@ -441,8 +364,8 @@ design rules under a new name.</description>
 <wire x1="-25.4" y1="60.96" x2="-24.13" y2="60.96" width="0.1524" layer="16"/>
 <wire x1="-24.13" y1="60.96" x2="-20.32" y2="57.15" width="0.1524" layer="16"/>
 <wire x1="-20.32" y1="57.15" x2="-20.32" y2="46.99" width="0.1524" layer="16"/>
-<wire x1="-20.32" y1="46.99" x2="21.59" y2="5.08" width="0.1524" layer="16"/>
-<wire x1="21.59" y1="5.08" x2="24.13" y2="5.08" width="0.1524" layer="16"/>
+<wire x1="-20.32" y1="46.99" x2="19.05" y2="7.62" width="0.1524" layer="16"/>
+<wire x1="19.05" y1="7.62" x2="19.05" y2="5.08" width="0.1524" layer="16"/>
 </signal>
 <signal name="S$60">
 <via x="-22.86" y="60.96" extent="1-16" drill="0.35"/>
@@ -459,9 +382,6 @@ design rules under a new name.</description>
 <signal name="S$64">
 <via x="-22.86" y="66.04" extent="1-16" drill="0.35"/>
 </signal>
-<signal name="S$65">
-<via x="-25.4" y="68.58" extent="1-16" drill="0.35"/>
-</signal>
 <signal name="S$66">
 <via x="-22.86" y="68.58" extent="1-16" drill="0.35"/>
 </signal>
@@ -471,30 +391,8 @@ design rules under a new name.</description>
 <signal name="S$68">
 <via x="-22.86" y="71.12" extent="1-16" drill="0.35"/>
 </signal>
-<signal name="S$69">
-<via x="-25.4" y="73.66" extent="1-16" drill="0.35"/>
-</signal>
-<signal name="S$70">
-<via x="-22.86" y="73.66" extent="1-16" drill="0.35"/>
-</signal>
 <signal name="S$2">
 <via x="25.4" y="15.24" extent="1-16" drill="0.35"/>
-</signal>
-<signal name="S$6">
-<via x="27.94" y="12.7" extent="1-16" drill="0.35"/>
-</signal>
-<signal name="S$9">
-<wire x1="-6.35" y1="-5.08" x2="-6.35" y2="-7.62" width="0.1524" layer="16"/>
-<wire x1="-6.35" y1="-7.62" x2="-7.62" y2="-8.89" width="0.1524" layer="16"/>
-<wire x1="-7.62" y1="-8.89" x2="-11.43" y2="-8.89" width="0.1524" layer="16"/>
-<wire x1="-11.43" y1="-8.89" x2="-1.27" y2="-8.89" width="0.1524" layer="16"/>
-<wire x1="-1.27" y1="-8.89" x2="0" y2="-7.62" width="0.1524" layer="16"/>
-<wire x1="-1.27" y1="-8.89" x2="2.54" y2="-8.89" width="0.1524" layer="16"/>
-<wire x1="2.54" y1="-8.89" x2="3.81" y2="-7.62" width="0.1524" layer="16"/>
-</signal>
-<signal name="S$72">
-<wire x1="-11.43" y1="-8.89" x2="-22.86" y2="6.35" width="0.1524" layer="16"/>
-<wire x1="-22.86" y1="6.35" x2="-22.86" y2="12.7" width="0.1524" layer="16"/>
 </signal>
 <signal name="S$73">
 <via x="25.4" y="15.24" extent="1-16" drill="0.35"/>
@@ -634,15 +532,6 @@ design rules under a new name.</description>
 <signal name="S$118">
 <via x="27.94" y="71.12" extent="1-16" drill="0.35"/>
 </signal>
-<signal name="S$119">
-<via x="25.4" y="73.66" extent="1-16" drill="0.35"/>
-</signal>
-<signal name="S$120">
-<via x="27.94" y="73.66" extent="1-16" drill="0.35"/>
-</signal>
-<signal name="S$121">
-<via x="-6.35" y="-5.08" extent="1-16" drill="0.35"/>
-</signal>
 <signal name="S$122">
 <via x="-3.81" y="-5.08" extent="1-16" drill="0.35"/>
 <wire x1="-3.81" y1="-5.08" x2="-3.81" y2="29.21" width="0.1524" layer="1"/>
@@ -653,10 +542,6 @@ design rules under a new name.</description>
 </signal>
 <signal name="S$124">
 <via x="1.27" y="-5.08" extent="1-16" drill="0.35"/>
-</signal>
-<signal name="S$4">
-<via x="3.81" y="-5.08" extent="1-16" drill="0.35"/>
-<wire x1="3.81" y1="-5.08" x2="3.81" y2="-7.62" width="0.1524" layer="16"/>
 </signal>
 <signal name="S$126">
 <via x="6.35" y="-5.08" extent="1-16" drill="0.35"/>
@@ -721,9 +606,6 @@ design rules under a new name.</description>
 <signal name="S$8">
 <via x="-2.54" y="-7.62" extent="1-16" drill="0.35"/>
 </signal>
-<signal name="S$135">
-<via x="0" y="-7.62" extent="1-16" drill="0.35"/>
-</signal>
 <signal name="S$136">
 <via x="2.54" y="-7.62" extent="1-16" drill="0.35"/>
 <wire x1="2.54" y1="-7.62" x2="2.54" y2="5.08" width="0.1524" layer="16"/>
@@ -743,35 +625,73 @@ design rules under a new name.</description>
 <wire x1="25.4" y1="52.07" x2="26.67" y2="52.07" width="0.1524" layer="1"/>
 <wire x1="26.67" y1="52.07" x2="27.94" y2="50.8" width="0.1524" layer="1"/>
 </signal>
-<signal name="S$139">
-<via x="10.16" y="-7.62" extent="1-16" drill="0.35"/>
-<wire x1="10.16" y1="-7.62" x2="8.89" y2="-8.89" width="0.1524" layer="16"/>
-<wire x1="8.89" y1="-8.89" x2="2.54" y2="-8.89" width="0.1524" layer="16"/>
-</signal>
 <signal name="S$140">
 <via x="12.7" y="-7.62" extent="1-16" drill="0.35"/>
 <wire x1="12.7" y1="-7.62" x2="12.7" y2="33.02" width="0.1524" layer="1"/>
 <wire x1="12.7" y1="33.02" x2="25.4" y2="45.72" width="0.1524" layer="1"/>
 </signal>
-<signal name="S$1">
-<via x="25.4" y="12.7" extent="1-16" drill="0.35"/>
-</signal>
 <signal name="GND">
-<polygon width="0.2" layer="1" isolate="0.3048">
+<polygon width="0.1524" layer="1" isolate="0.3048">
 <vertex x="31.75" y="-13.97"/>
 <vertex x="31.75" y="77.47"/>
 <vertex x="-29.21" y="77.47"/>
 <vertex x="-29.21" y="-13.97"/>
 </polygon>
+<via x="1.27" y="16.51" extent="1-16" drill="0.35"/>
+<via x="-25.4" y="5.08" extent="1-16" drill="0.35"/>
+<via x="26.67" y="-5.08" extent="1-16" drill="0.35"/>
+<polygon width="0.1524" layer="16" isolate="0.3048">
+<vertex x="-29.21" y="77.47"/>
+<vertex x="31.75" y="77.47"/>
+<vertex x="31.75" y="-13.97"/>
+<vertex x="-29.21" y="-13.97"/>
+</polygon>
+<via x="-22.86" y="12.7" extent="1-16" drill="0.35"/>
+<via x="25.4" y="12.7" extent="1-16" drill="0.35"/>
+<via x="0" y="-7.62" extent="1-16" drill="0.35"/>
+<via x="26.67" y="6.35" extent="1-16" drill="0.35"/>
+<via x="26.67" y="1.27" extent="1-16" drill="0.35"/>
+<via x="21.59" y="1.27" extent="1-16" drill="0.35"/>
+<via x="21.59" y="6.35" extent="1-16" drill="0.35"/>
+<via x="-6.35" y="-5.08" extent="1-16" drill="0.35"/>
+<via x="3.81" y="-5.08" extent="1-16" drill="0.35"/>
+<via x="10.16" y="-7.62" extent="1-16" drill="0.35"/>
+<via x="-22.86" y="73.66" extent="1-16" drill="0.35"/>
+<via x="-25.4" y="73.66" extent="1-16" drill="0.35"/>
+<via x="25.4" y="73.66" extent="1-16" drill="0.35"/>
+<via x="27.94" y="73.66" extent="1-16" drill="0.35"/>
+<via x="27.94" y="12.7" extent="1-16" drill="0.35"/>
+<via x="-25.4" y="12.7" extent="1-16" drill="0.35"/>
+<via x="-25.4" y="45.72" extent="1-16" drill="0.35"/>
+<via x="-25.4" y="68.58" extent="1-16" drill="0.35"/>
+</signal>
+<signal name="S$11">
+<via x="-25.4" y="38.1" extent="1-16" drill="0.35"/>
+</signal>
+<signal name="S$12">
+<via x="-25.4" y="35.56" extent="1-16" drill="0.35"/>
+</signal>
+<signal name="S$13">
+<via x="1.27" y="74.93" extent="1-16" drill="0.35"/>
+</signal>
+<signal name="S$14">
+<via x="1.27" y="57.15" extent="1-16" drill="0.35"/>
+</signal>
+<signal name="S$17">
+<via x="1.27" y="38.1" extent="1-16" drill="0.35"/>
+</signal>
+<signal name="S$15">
+<via x="24.13" y="3.81" extent="1-16" drill="0.35"/>
+<wire x1="24.13" y1="3.81" x2="20.32" y2="3.81" width="0.1524" layer="16"/>
+<wire x1="20.32" y1="3.81" x2="19.05" y2="5.08" width="0.1524" layer="16"/>
 </signal>
 </signals>
 </board>
 </drawing>
 <compatibility>
-<note version="8.2" severity="warning">
-Since Version 8.2, Eagle supports online libraries. The ids
-of those online libraries will not be understood (or retained)
-with this version.
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
 </note>
 </compatibility>
 </eagle>
